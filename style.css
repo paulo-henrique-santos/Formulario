@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #202020, #000000);
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    height: 500px;
+    background-color: red;
+}
+
+/* CIRCULOS */
+
+.circulo {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CIRCULOS GIRANDO */
+
+.circulo span {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+
+/* CIRCULO AMARELO */
+
+.circulo span:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+}
+
+/* CIRCULO CIANO */
+
+.circulo span:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+}
+
+/* CIRCULO ROSA */
+
+.circulo span:nth-child(3) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+}
+
+.circulo:hover span {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+
+/* KWYFRAMES DE ANIMAÇÃO */
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.formulario {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario h2 {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.informacao {
+    position: relative;
+    width: 100%;
+}
+
+.informacao input {
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+}
+
+/* LOGAR */
+
+.informacao input[type="submit"] {
+    width: 100%;
+    background: #0077ff;
+    background: linear-gradient(to right, #240b36, #c31432);
+    border: none;
+    cursor: pointer;
+}
+
+/* "NOME DE USUÁRIO" E "SENHA"(PLACEHOLDERS) */
+
+.informacao input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* LINKS */
+
+.links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.linksc a {
+    color: #fff;
+    text-decoration: none;
+}
